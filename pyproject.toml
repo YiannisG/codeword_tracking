@@ -2,7 +2,7 @@
 name = "codeword-tracking"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Yiannis Galanakis <igalas@hotmail.co.uk>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
