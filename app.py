@@ -33,7 +33,7 @@ GET_CODEWORDS_SCHEMA = {
 @app.get("/get-actions")
 def get_actions():
     """ Retrieves all codewords and actions in the json file """
-    return jsonify(actions)
+    return jsonify({"result": actions})
 
 
 @app.get("/get-action-id")
