@@ -7,7 +7,7 @@ def test_existing_codeword():
     with app.test_client() as c:
         res = c.get("/get-action-id", json={"codeword": 5001})
         assert res.status_code == 200
-        expected = "alert"
+        expected = {"result": "alert"}
         assert expected == json.loads(res.get_data(as_text=True))
 
 

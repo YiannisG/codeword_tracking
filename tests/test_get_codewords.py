@@ -7,7 +7,7 @@ def test_existing_action_id():
     with app.test_client() as c:
         res = c.get("/get-codewords", json={"action_id": "thanks"})
         assert res.status_code == 200
-        expected = [5002]
+        expected = {"result": [5002]}
         assert expected == json.loads(res.get_data(as_text=True))
 
 
@@ -15,7 +15,7 @@ def test_missing_action_id():
     with app.test_client() as c:
         res = c.get("/get-codewords", json={"action_id": "thanks2"})
         assert res.status_code == 200
-        expected = []
+        expected = {"result": []}
         assert expected == json.loads(res.get_data(as_text=True))
 
 

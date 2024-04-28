@@ -47,7 +47,7 @@ def get_action_id():
     codeword = data["codeword"]
     for action in actions:
         if action["codeword"] == codeword:
-            return jsonify(action["id"])
+            return jsonify({"result": action["id"]})
     return jsonify({"message": f"codeword: {codeword} does not exist"}), 400
 
 
@@ -60,7 +60,8 @@ def get_codeword():
     except ValidationError as e:
         return jsonify({"message": f"improperly formatted body: {e.message}"}), 400
     action_id = data["action_id"]
-    return jsonify([entry["codeword"] for entry in actions if entry["id"] == action_id])
+    search = [entry["codeword"] for entry in actions if entry["id"] == action_id]
+    return jsonify({"result": search})
 
 
 if __name__ == "__main__":
