@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "codeword-tracking"
+version = "0.1.0"
+description = ""
+authors = ["Yiannis Galanakis <igalas@hotmail.co.uk>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.3"
+pytest = "^8.2.0"
+jsonschema = "^4.21.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
