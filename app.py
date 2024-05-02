@@ -36,7 +36,7 @@ def get_actions():
     return jsonify({"result": actions})
 
 
-@app.get("/get-action-id")
+@app.post("/get-action-id")
 def get_action_id():
     """ Looks up codeword in json input file and retrieves the action associated with it """
     data = request.get_json()
@@ -51,8 +51,8 @@ def get_action_id():
     return jsonify({"message": f"codeword: {codeword} does not exist"}), 400
 
 
-@app.get("/get-codewords")
-def get_codeword():
+@app.post("/get-codewords")
+def get_codewords():
     """ Looks up action_id in json input file and retrieves all codewords that match it """
     data = request.get_json()
     try:
