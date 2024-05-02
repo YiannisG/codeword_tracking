@@ -1,6 +1,10 @@
 # Codeword Tracking
 A simple python REST API to track codewords
 
+## Basic UI in React/Typescript
+
+https://github.com/YiannisG/codeword_tracking_ui
+
 ## Installation
 Create a new python 3.11 virtualenv
 
